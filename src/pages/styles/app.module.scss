@@ -1,0 +1,50 @@
+@import "../../styles/mixin";
+@import "../../styles/variable";
+
+.app {
+  @include flex(stretch, center, column, nowrap, space-between, center);
+  @include card();
+  gap: 10px;
+  height: 90%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.appHeader {
+  align-content: center;
+  height: 10%;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.appMain {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 80%;
+  width: 100%;
+}
+
+.appFooter {
+  align-content: center;
+  height: 10%;
+
+  h2 {
+    margin: 0;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .app {
+    height: 100%;
+  }
+}

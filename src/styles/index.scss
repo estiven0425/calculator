@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu&display=swap");
+@import "mixin";
+@import "variable";
+
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+:root {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  color: $fontPrimaryColor;
+  margin: 0;
+}
+
+#root {
+  align-content: center;
+  height: 100vh;
+  padding: 10px;
+}

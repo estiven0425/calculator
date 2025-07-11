@@ -1,0 +1,208 @@
+@import "../../styles/mixin";
+@import "../../styles/variable";
+
+.calculatorDisplay {
+  @include display();
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column: 1 / span 4;
+  grid-row: 1;
+
+  .calculatorInput {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    outline: none;
+  }
+
+  .calculatorResult {
+    align-content: center;
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    text-align: right;
+  }
+}
+
+.calculatorButtonClear {
+  @include button($thirdColor, $fontSecondaryColor);
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.calculatorButtonClear:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButtonEqual {
+  @include button($fifthColor, $fontSecondaryColor);
+  grid-column: 4;
+  grid-row: 6;
+}
+
+.calculatorButtonEqual:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton15 {
+  @include button($fourthColor, $fontPrimaryColor);
+  grid-column: 4;
+  grid-row: 4 / span 2;
+}
+
+.calculatorButton15:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton0 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.calculatorButton0:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton1 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.calculatorButton1:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton2 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.calculatorButton2:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton3 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.calculatorButton3:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton4 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.calculatorButton4:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton5 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.calculatorButton5:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton6 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.calculatorButton6:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton7 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.calculatorButton7:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton8 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.calculatorButton8:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton9 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.calculatorButton9:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton10 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 3;
+  grid-row: 5;
+}
+
+.calculatorButton10:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton11 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.calculatorButton11:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton12 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 1;
+  grid-row: 6;
+}
+
+.calculatorButton12:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton13 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 2;
+  grid-row: 6;
+}
+
+.calculatorButton13:hover {
+  transform: translateY(-5px);
+}
+
+.calculatorButton14 {
+  @include button(#ffffff, $fontPrimaryColor);
+  grid-column: 3;
+  grid-row: 6;
+}
+
+.calculatorButton14:hover {
+  transform: translateY(-5px);
+}

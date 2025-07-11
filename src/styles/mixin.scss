@@ -1,0 +1,43 @@
+@import "variable";
+
+@mixin flex($align, $alignItems, $direction, $wrap, $justify, $justifyItems) {
+  align-content: $align;
+  align-items: $alignItems;
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  justify-items: $justifyItems;
+}
+
+@mixin card() {
+  border-radius: 25px;
+  box-shadow:
+    -10px -10px 25px $primaryColor,
+    10px 10px 25px $secondaryColor;
+  padding: 10px;
+}
+
+@mixin display() {
+  border: none;
+  border-radius: 15px;
+  box-shadow:
+    -10px -10px 25px $primaryColor inset,
+    10px 10px 25px $secondaryColor inset;
+  color: $fontPrimaryColor;
+  outline: none;
+  padding: 10px;
+}
+
+@mixin button($backgroundColor, $color) {
+  background-color: $backgroundColor;
+  border: none;
+  border-radius: 15px;
+  color: $color;
+  cursor: pointer;
+  box-shadow:
+    -10px -10px 25px $primaryColor,
+    10px 10px 25px $secondaryColor;
+  outline: none;
+  padding: 10px;
+}
