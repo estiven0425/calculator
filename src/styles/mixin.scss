@@ -26,7 +26,9 @@
     10px 10px 25px variable.$secondaryColor inset;
   color: variable.$fontPrimaryColor;
   outline: none;
+  overflow: auto;
   padding: 10px;
+  word-break: break-all;
 }
 
 @mixin button($backgroundColor, $color) {
