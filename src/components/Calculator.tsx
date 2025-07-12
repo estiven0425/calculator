@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {evaluate} from "mathjs";
 import Style from "./styles/calculator.module.scss";
 
 function Calculator() {
@@ -16,7 +17,7 @@ function Calculator() {
 
   const handleCalculate = () => {
     try {
-      const calculated = eval(input);
+      const calculated = evaluate(input);
       setResult(calculated);
       console.log("Calculando: ", calculated);
     } catch (error) {

@@ -1,9 +1,9 @@
-@import "../../styles/mixin";
-@import "../../styles/variable";
+@use "../../styles/mixin";
+@use "../../styles/variable";
 
 .app {
-  @include flex(stretch, center, column, nowrap, space-between, center);
-  @include card();
+  @include mixin.flex(stretch, center, column, nowrap, space-between, center);
+  @include mixin.card();
   gap: 10px;
   height: 90%;
   margin: auto;

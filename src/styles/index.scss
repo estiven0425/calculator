@@ -1,6 +1,6 @@
+@use "mixin";
+@use "variable";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu&display=swap");
-@import "mixin";
-@import "variable";
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@
 }
 
 body {
-  color: $fontPrimaryColor;
+  color: variable.$fontPrimaryColor;
   margin: 0;
 }
 

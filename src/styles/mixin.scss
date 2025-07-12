@@ -1,4 +1,4 @@
-@import "variable";
+@use "variable";
 
 @mixin flex($align, $alignItems, $direction, $wrap, $justify, $justifyItems) {
   align-content: $align;
@@ -13,8 +13,8 @@
 @mixin card() {
   border-radius: 25px;
   box-shadow:
-    -10px -10px 25px $primaryColor,
-    10px 10px 25px $secondaryColor;
+    -10px -10px 25px variable.$primaryColor,
+    10px 10px 25px variable.$secondaryColor;
   padding: 10px;
 }
 
@@ -22,9 +22,9 @@
   border: none;
   border-radius: 15px;
   box-shadow:
-    -10px -10px 25px $primaryColor inset,
-    10px 10px 25px $secondaryColor inset;
-  color: $fontPrimaryColor;
+    -10px -10px 25px variable.$primaryColor inset,
+    10px 10px 25px variable.$secondaryColor inset;
+  color: variable.$fontPrimaryColor;
   outline: none;
   padding: 10px;
 }
@@ -36,8 +36,8 @@
   color: $color;
   cursor: pointer;
   box-shadow:
-    -10px -10px 25px $primaryColor,
-    10px 10px 25px $secondaryColor;
+    -10px -10px 25px variable.$primaryColor,
+    10px 10px 25px variable.$secondaryColor;
   outline: none;
   padding: 10px;
 }

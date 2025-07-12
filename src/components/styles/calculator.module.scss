@@ -1,8 +1,8 @@
-@import "../../styles/mixin";
-@import "../../styles/variable";
+@use "../../styles/mixin";
+@use "../../styles/variable";
 
 .calculatorDisplay {
-  @include display();
+  @include mixin.display();
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(4, 1fr);
@@ -28,7 +28,7 @@
 }
 
 .calculatorButtonClear {
-  @include button($thirdColor, $fontSecondaryColor);
+  @include mixin.button(variable.$thirdColor, variable.$fontSecondaryColor);
   grid-column: 1 / span 2;
   grid-row: 2;
 }
@@ -38,7 +38,7 @@
 }
 
 .calculatorButtonEqual {
-  @include button($fifthColor, $fontSecondaryColor);
+  @include mixin.button(variable.$fifthColor, variable.$fontSecondaryColor);
   grid-column: 4;
   grid-row: 6;
 }
@@ -48,7 +48,7 @@
 }
 
 .calculatorButton15 {
-  @include button($fourthColor, $fontPrimaryColor);
+  @include mixin.button(variable.$fourthColor, variable.$fontPrimaryColor);
   grid-column: 4;
   grid-row: 4 / span 2;
 }
@@ -58,7 +58,7 @@
 }
 
 .calculatorButton0 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 1;
   grid-row: 3;
 }
@@ -68,7 +68,7 @@
 }
 
 .calculatorButton1 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 2;
   grid-row: 3;
 }
@@ -78,7 +78,7 @@
 }
 
 .calculatorButton2 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 3;
   grid-row: 3;
 }
@@ -88,7 +88,7 @@
 }
 
 .calculatorButton3 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 3;
   grid-row: 2;
 }
@@ -98,7 +98,7 @@
 }
 
 .calculatorButton4 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 1;
   grid-row: 4;
 }
@@ -108,7 +108,7 @@
 }
 
 .calculatorButton5 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 2;
   grid-row: 4;
 }
@@ -118,7 +118,7 @@
 }
 
 .calculatorButton6 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 3;
   grid-row: 4;
 }
@@ -128,7 +128,7 @@
 }
 
 .calculatorButton7 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 4;
   grid-row: 2;
 }
@@ -138,7 +138,7 @@
 }
 
 .calculatorButton8 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 1;
   grid-row: 5;
 }
@@ -148,7 +148,7 @@
 }
 
 .calculatorButton9 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 2;
   grid-row: 5;
 }
@@ -158,7 +158,7 @@
 }
 
 .calculatorButton10 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 3;
   grid-row: 5;
 }
@@ -168,7 +168,7 @@
 }
 
 .calculatorButton11 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 4;
   grid-row: 3;
 }
@@ -178,7 +178,7 @@
 }
 
 .calculatorButton12 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 1;
   grid-row: 6;
 }
@@ -188,7 +188,7 @@
 }
 
 .calculatorButton13 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 2;
   grid-row: 6;
 }
@@ -198,7 +198,7 @@
 }
 
 .calculatorButton14 {
-  @include button(#ffffff, $fontPrimaryColor);
+  @include mixin.button(#ffffff, variable.$fontPrimaryColor);
   grid-column: 3;
   grid-row: 6;
 }
