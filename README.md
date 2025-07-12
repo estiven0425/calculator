@@ -1,69 +1,112 @@
-# React + TypeScript + Vite
+# Calculadora React con Vite + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> _💡 Descripción del proyecto:_  
+> _Calculadora sencilla clásica desarrollada con fines educativos, está en fase de producción ya desplegada en GitHub Pages, se ha desarrollado con la intención de aprender TypeScript y mejorar el conocimiento y uso del IDE WebStorm. Software sujeto a actualizaciones._
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
+- [Docker](https://www.docker.com/)
+- [GitHub Pages](https://pages.github.com/)
+- IDE recomendado: [WebStorm](https://www.jetbrains.com/webstorm/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Clonar el repositorio
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/estiven0425/calculator.git
+cd calculator
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📥 Instalar dependencias
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+---
+
+## 🧪 Ejecutar en entorno local (modo desarrollo)
+
+```bash
+npm run dev
+```
+
+Esto iniciará la aplicación en `http://localhost:5173` por defecto.
+
+---
+
+## 🐳 Iniciar con Docker (modo producción)
+
+### 1. Configurar `vite.config.ts`
+
+Antes de compilar para Docker, cambia la propiedad `base` en el archivo `vite.config.ts`:
+
+```ts
+export default defineConfig({
+  base: './',
+  ...
+});
+```
+
+Esto garantiza que los recursos estáticos se sirvan correctamente sin rutas relativas dependientes de GitHub Pages.
+
+---
+
+### 2. Compilar la app
+
+```bash
+npm run build
+```
+
+---
+
+### 3. Ejecutar con Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+La aplicación quedará disponible en:  
+👉 `http://localhost:8080`
+
+---
+
+## 🌐 Desplegar en GitHub Pages
+
+La configuración por defecto en `vite.config.ts` usa:
+
+```ts
+base: "/calculator/";
+```
+
+Esto permite desplegar correctamente usando GitHub Pages. Asegúrate que el repositorio y la ruta coincidan.
+
+### 1. Compilar para GitHub Pages
+
+```bash
+npm run build
+```
+
+### 2. Desplegar
+
+```bash
+npm run deploy
+```
+
+Esto usa `gh-pages` para publicar el contenido del directorio `dist` en el branch `gh-pages`.
+
+---
+
+## 📄 Licencia
+
+Este proyecto fue hecho con fines educativos y sin ánimo de lucro, si quieres recomendarme algo adelante, estaría muy agradecido.  
+Puedes modificarlo, adaptarlo y usarlo libremente.
